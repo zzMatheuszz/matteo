@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo - Consultoria Fitness Online</title>
+
+    <!-- SEO & Meta Tags Essenciais -->
+    <meta name="description" content="Transforme seu corpo e sua mente com a consultoria fitness online de Matteo. Planos de treino e nutrição 100% individualizados.">
+    <meta name="keywords" content="personal trainer, consultoria fitness, musculação, nutrição esportiva, treino online, Matteo Usmari Veroneze">
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seusite.com/"> <!-- IMPORTANTE: Substituir pela URL real do seu site -->
+    <meta property="og:title" content="Matteo - Consultoria Fitness Online">
+    <meta property="og:description" content="Transforme seu corpo e sua mente com a consultoria fitness online de Matteo.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200&auto=format&fit=crop"> <!-- IMPORTANTE: Substituir por uma imagem de preview do seu site -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/C6A969/111111?text=M" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+          --bg-dark: #111111; /* Preto mais suave e harmonico */
+          --bg-card: #1A1A1A; /* Fundo de seção mais próximo do principal para harmonia */
+          --gold: #C6A969;   /* Dourado mais refinado */
+          --accent-blue: #3b82f6; /* Azul sutil para acentos */
+          --text-light: #F5F5F5;
+          --text-muted: #A9A9A9;
+          --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #111111 0%, #111827 100%); /* Gradiente com fundo azulado sutil */
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 1)), url('imagens/plano.jpeg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .section {
+            padding: 5rem 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .section {
+                padding: 7rem 2rem;
+            }
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 20px rgba(59, 130, 246, 0.15);
+        }
+        
+        .card-title {
+            font-size: 1.35rem;
+            margin-top: 1.5rem;
+        }
+
+        .icon-wrapper {
+            background-color: rgba(198, 169, 105, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--gold);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover .icon-wrapper {
+             background-color: var(--gold);
+             color: var(--bg-dark);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            background: var(--gold);
+            color: var(--bg-dark);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(198, 169, 105, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #d4b87a;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(198, 169, 105, 0.3);
+        }
+        
+        .whatsapp-button {
+            background-color: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: var(--gold);
+            color: var(--bg-dark);
+        }
+
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-dark); z-index: 9999; display: flex;
+            align-items: center; justify-content: center; transition: opacity 0.5s ease-out;
+        }
+        .loader {
+            border: 4px solid #222; border-top: 4px solid var(--gold);
+            border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        #main-headline-container { min-height: 140px; }
+        @media (min-width: 768px) { #main-headline-container { min-height: 160px; } }
+        #main-headline { white-space: normal; }
+        .hidden-content { visibility: hidden; opacity: 0; transition: visibility 0s 0.5s, opacity 0.5s linear; }
+        .visible-content { visibility: visible; opacity: 1; transition: opacity 0.5s linear; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="preloader"><div class="loader"></div></div>
+
+    <div id="main-content" class="hidden-content">
+        <header id="header" class="bg-transparent fixed w-full top-0 z-50 transition-all duration-300">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#inicio" class="flex items-center">
+                     <!-- IMPORTANTE: Substituir por sua logo em formato SVG ou PNG otimizado -->
+                    <img src="imagens/logo.png" alt="Logo de Matteo Personal Trainer" class="h-20">
+                </a>
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#treinador" class="text-gray-300 hover:text-[var(--gold)] transition duration-300">O Treinador</a>
+                    <a href="#filosofia" class="text-gray-300 hover:text-[var(--gold)] transition duration-300">Filosofia</a>
+                    <a href="#consultoria" class="text-gray-300 hover:text-[var(--gold)] transition duration-300">A Consultoria</a>
+                    <a href="#resultados" class="text-gray-300 hover:text-[var(--gold)] transition duration-300">Resultados</a>
+                    <a href="#contato" class="text-gray-300 hover:text-[var(--gold)] transition duration-300">Contacto</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-[var(--bg-card)]">
+                <a href="#treinador" class="block py-3 px-6 text-sm text-gray-300 hover:bg-black/20">O Treinador</a>
+                <a href="#filosofia" class="block py-3 px-6 text-sm text-gray-300 hover:bg-black/20">Filosofia</a>
+                <a href="#consultoria" class="block py-3 px-6 text-sm text-gray-300 hover:bg-black/20">A Consultoria</a>
+                <a href="#resultados" class="block py-3 px-6 text-sm text-gray-300 hover:bg-black/20">Resultados</a>
+                <a href="#contato" class="block py-3 px-6 text-sm text-gray-300 hover:bg-black/20">Contacto</a>
+            </div>
+        </header>
+
+        <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative">
+            <div class="text-center px-6 z-10">
+                <div id="main-headline-container">
+                    <h1 id="main-headline" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-4">
+                        <!-- O texto será inserido via JS -->
+                    </h1>
+                </div>
+                <p class="text-base md:text-xl text-[var(--text-muted)] mb-8 max-w-3xl mx-auto fade-in" style="transition-delay: 2.5s;">
+                    Alcance seus objetivos com um plano de treino e acompanhamento totalmente individualizado.
+                </p>
+                <a href="#contato" class="cta-button fade-in" style="transition-delay: 2.8s;">
+                    Quero Começar Agora
+                </a>
+            </div>
+        </section>
+
+        <main>
+            <section id="treinador" class="section">
+                <div class="container mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <div class="fade-in">
+                            <div class="max-w-sm mx-auto"> <!-- Wrapper para controlar o tamanho da imagem -->
+                                <!-- Otimização: loading="lazy" para carregar a imagem apenas quando estiver visível. Substituir por uma imagem real e otimizada. -->
+                                <img src="imagens/pessoa.jpeg" alt="Foto de Matteo, seu personal trainer" class="rounded-lg w-full h-auto object-cover shadow-2xl" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="fade-in" style="transition-delay: 200ms;">
+                            <h2 class="section-title text-left mb-6">Conheça seu Treinador</h2>
+                            <h3 class="text-2xl text-[var(--gold)] mb-4">Matteo Usmari Veroneze</h3>
+                            <p class="text-[var(--text-muted)] mb-4">
+                                Tenho 25 anos e desde os 19 me dedico a mudar a vida das pessoas por meio da musculação. Formado em Educação Física e pós-graduado em Nutrição Esportiva, atuo como Personal Trainer há 4 anos.
+                            </p>
+                             <p class="text-[var(--text-muted)]">
+                                Minha missão vai além de montar treinos; eu te acompanho e oriento em todas as vertentes ligadas à sua saúde, pois a academia é apenas uma das bases de uma evolução constante e significativa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="filosofia" class="section">
+                <div class="container mx-auto px-6">
+                    <h2 class="section-title fade-in">Minha Filosofia</h2>
+                    <p class="section-subtitle fade-in">Os pilares que garantem o seu sucesso.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+                        <div class="card p-8 text-center fade-in flex flex-col justify-center items-center">
+                            <div class="icon-wrapper mb-4"><i class="fas fa-shield-alt"></i></div>
+                            <h4 class="card-title !mt-0">Individualidade</h4>
+                            <p class="text-sm text-[var(--text-muted)] mt-2">Seu treino, seus objetivos, seu ritmo. Um plano 100% focado em você.</p>
+                        </div>
+                         <div class="card p-8 text-center fade-in flex flex-col justify-center items-center" style="transition-delay: 150ms;">
+                            <div class="icon-wrapper mb-4"><i class="fas fa-star"></i></div>
+                            <h4 class="card-title !mt-0">Excelência</h4>
+                            <p class="text-sm text-[var(--text-muted)] mt-2">Aperfeiçoamento constante para oferecer sempre o melhor método.</p>
+                        </div>
+                         <div class="card p-8 text-center fade-in flex flex-col justify-center items-center" style="transition-delay: 300ms;">
+                           <div class="icon-wrapper mb-4"><i class="fas fa-users"></i></div>
+                            <h4 class="card-title !mt-0">Parceria</h4>
+                            <p class="text-sm text-[var(--text-muted)] mt-2">Atuação como seu principal motivador, lado a lado na sua jornada.</p>
+                        </div>
+                         <div class="card p-8 text-center fade-in flex flex-col justify-center items-center" style="transition-delay: 450ms;">
+                            <div class="icon-wrapper mb-4"><i class="fas fa-bullseye"></i></div>
+                            <h4 class="card-title !mt-0">Resultados</h4>
+                            <p class="text-sm text-[var(--text-muted)] mt-2">Foco absoluto em métricas que impulsionam seu corpo e sua mente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="consultoria" class="section">
+                <div class="container mx-auto px-6">
+                    <h2 class="section-title fade-in">Como Funciona a Consultoria</h2>
+                    <p class="section-subtitle fade-in">Um método passo a passo pensado para a sua evolução.</p>
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Linha do tempo -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-dashed border-[var(--accent-blue)] opacity-20 hidden md:block"></div>
+                        
+                        <!-- Item 1 -->
+                        <div class="md:grid md:grid-cols-2 gap-8 mb-12 fade-in items-center">
+                            <div class="text-center md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl text-[var(--gold)]">Avaliação Completa</h3>
+                                <p class="text-[var(--text-muted)]">Analisamos seus objetivos, histórico e rotina para criar a base do seu plano.</p>
+                            </div>
+                            <div class="flex justify-center md:justify-start"><div class="icon-wrapper"><i class="fas fa-clipboard-list"></i></div></div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="md:grid md:grid-cols-2 gap-8 mb-12 fade-in items-center">
+                            <div class="text-center md:text-left md:pl-8 mb-4 md:mb-0 md:order-2">
+                                <h3 class="text-2xl text-[var(--gold)]">Planejamento Individual</h3>
+                                <p class="text-[var(--text-muted)]">Desenvolvemos um treino e plano alimentar exclusivos para você.</p>
+                            </div>
+                             <div class="flex justify-center md:justify-end md:order-1">
+                                <div class="icon-wrapper"><i class="fas fa-ruler-combined"></i></div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="md:grid md:grid-cols-2 gap-8 mb-12 fade-in items-center">
+                            <div class="text-center md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl text-[var(--gold)]">Acesso por App</h3>
+                                <p class="text-[var(--text-muted)]">Receba seus treinos com vídeos e instruções na palma da sua mão.</p>
+                            </div>
+                            <div class="flex justify-center md:justify-start"><div class="icon-wrapper"><i class="fas fa-mobile-alt"></i></div></div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="md:grid md:grid-cols-2 gap-8 fade-in items-center">
+                            <div class="text-center md:text-left md:pl-8 mb-4 md:mb-0 md:order-2">
+                                <h3 class="text-2xl text-[var(--gold)]">Suporte e Ajustes</h3>
+                                <p class="text-[var(--text-muted)]">Monitoramos seu progresso e ajustamos o plano para garantir resultados contínuos.</p>
+                            </div>
+                             <div class="flex justify-center md:justify-end md:order-1">
+                                <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resultados" class="section">
+                <div class="container mx-auto px-6">
+                    <h2 class="section-title fade-in">Resultados que Inspiram</h2>
+                    <p class="section-subtitle fade-in">Veja a transformação real de alguns dos meus alunos.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card p-8 text-center fade-in">
+                            <h4 class="card-title !mt-0">Ana S.</h4>
+                             <p class="text-sm text-[var(--gold)] mb-3">Emagrecimento</p>
+                            <p class="text-[var(--text-muted)] text-sm mt-2">"Perdi 10kg em 3 meses! O acompanhamento do Matteo foi essencial para me manter motivada e seguir o plano corretamente. Recomendo demais!"</p>
+                        </div>
+                        <div class="card p-8 text-center fade-in" style="transition-delay: 150ms;">
+                            <h4 class="card-title !mt-0">Matheus G.</h4>
+                             <p class="text-sm text-[var(--gold)] mb-3">Hipertrofia</p>
+                            <p class="text-[var(--text-muted)] text-sm mt-2">"Nunca tive resultados tão expressivos. O treino é pensado para mim e os ajustes fazem toda a diferença. Profissional excelente!"</p>
+                        </div>
+                        <div class="card p-8 text-center fade-in" style="transition-delay: 300ms;">
+                           <h4 class="card-title !mt-0">Carla M.</h4>
+                             <p class="text-sm text-[var(--gold)] mb-3">Qualidade de Vida</p>
+                            <p class="text-[var(--text-muted)] text-sm mt-2">"Comecei para ter mais disposição e saúde. Hoje me sinto outra pessoa, com muito mais energia. A consultoria online facilitou tudo!"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato" class="section">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="section-title fade-in">Pronto para o Próximo Passo?</h2>
+                    <p class="section-subtitle fade-in">Entre em contacto e descubra como podemos transformar os seus objetivos em realidade.</p>
+                    <div class="fade-in">
+                        <a href="https://wa.me/5511941899725?text=Ol%C3%A1,%20Matteo!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria." target="_blank" class="cta-button">
+                            <i class="fab fa-whatsapp mr-2"></i> Falar com o Treinador
+                        </a>
+                        <div class="mt-8 flex justify-center items-center space-x-6">
+                             <a href="mailto:matteo.usmari090940@gmail.com" class="text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors duration-300">
+                                <i class="fas fa-envelope mr-1"></i> E-mail
+                            </a>
+                             <a href="https://www.instagram.com/matteo_opersonal" target="_blank" class="text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors duration-300">
+                                <i class="fab fa-instagram mr-1"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-black py-6 border-t border-[var(--border-color)]">
+            <div class="container mx-auto px-6 text-center text-gray-600">
+                <p class="text-sm">&copy; 2024 Matteo Personal Trainer. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            preloader.style.opacity = '0';
+            mainContent.classList.remove('hidden-content');
+            mainContent.classList.add('visible-content');
+            setTimeout(() => { 
+                preloader.style.display = 'none';
+                
+                const headline = document.getElementById('main-headline');
+                const text = "Sua Melhor Versão Começa Agora!";
+                typeWriter(headline, text, 70);
+
+            }, 500);
+        };
+
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-[var(--bg-dark)]', 'shadow-lg');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-[var(--bg-dark)]', 'shadow-lg');
+                header.classList.add('bg-transparent');
+            }
+        });
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>
+
+
