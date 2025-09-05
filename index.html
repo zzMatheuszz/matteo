@@ -55,6 +55,13 @@
             background-size: cover;
             background-attachment: fixed;
         }
+
+        /* Correção para o fundo em dispositivos móveis */
+        @media (max-width: 767px) {
+            body, .hero-bg {
+                background-attachment: scroll; /* Desativa o efeito parallax para evitar bugs */
+            }
+        }
         
         .section {
             padding: 5rem 1.5rem;
@@ -446,10 +453,9 @@
 
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
-        });
+        });;
     </script>
 
 </body>
 </html>
-
 
